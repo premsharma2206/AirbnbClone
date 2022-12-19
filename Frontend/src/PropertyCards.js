@@ -291,6 +291,7 @@ const PropertiesTable = (props) => {
 const App = (props) => {
   const [properties, setProperties] = useState([]);
   useEffect(() => {
+    console.log("In use effect", process.env.REACT_APP_URL);
     const url = process.env.REACT_APP_URL + "property";
     console.log(url);
     fetch(url)
